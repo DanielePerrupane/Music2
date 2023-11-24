@@ -11,6 +11,11 @@
 		E7244FF72B0FED4D00090EEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7244FF62B0FED4D00090EEF /* ContentView.swift */; };
 		E7244FF92B0FED4E00090EEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7244FF82B0FED4E00090EEF /* Assets.xcassets */; };
 		E7244FFC2B0FED4E00090EEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7244FFB2B0FED4E00090EEF /* Preview Assets.xcassets */; };
+		E78D14A32B10E3010001E7FA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14A22B10E3010001E7FA /* Song.swift */; };
+		E78D14A52B10E3E50001E7FA /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14A42B10E3E50001E7FA /* SongViewModel.swift */; };
+		E78D14A72B10E4650001E7FA /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14A62B10E4650001E7FA /* SongView.swift */; };
+		E78D14A92B10EF090001E7FA /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14A82B10EF090001E7FA /* TabBarView.swift */; };
+		E78D14AB2B10FA210001E7FA /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14AA2B10FA210001E7FA /* LibraryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		E7244FF62B0FED4D00090EEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7244FF82B0FED4E00090EEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7244FFB2B0FED4E00090EEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E78D14A22B10E3010001E7FA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		E78D14A42B10E3E50001E7FA /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		E78D14A62B10E4650001E7FA /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		E78D14A82B10EF090001E7FA /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		E78D14AA2B10FA210001E7FA /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,9 @@
 		E7244FF32B0FED4D00090EEF /* Music2 */ = {
 			isa = PBXGroup;
 			children = (
+				E78D14A12B10E2ED0001E7FA /* ViewModel */,
+				E78D14A02B10E2E70001E7FA /* Views */,
+				E78D149F2B10E2E30001E7FA /* Model */,
 				E7244FF42B0FED4D00090EEF /* Music2App.swift */,
 				E7244FF62B0FED4D00090EEF /* ContentView.swift */,
 				E7244FF82B0FED4E00090EEF /* Assets.xcassets */,
@@ -65,6 +78,32 @@
 				E7244FFB2B0FED4E00090EEF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E78D149F2B10E2E30001E7FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E78D14A22B10E3010001E7FA /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E78D14A02B10E2E70001E7FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E78D14A62B10E4650001E7FA /* SongView.swift */,
+				E78D14A82B10EF090001E7FA /* TabBarView.swift */,
+				E78D14AA2B10FA210001E7FA /* LibraryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E78D14A12B10E2ED0001E7FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E78D14A42B10E3E50001E7FA /* SongViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78D14AB2B10FA210001E7FA /* LibraryView.swift in Sources */,
+				E78D14A32B10E3010001E7FA /* Song.swift in Sources */,
+				E78D14A52B10E3E50001E7FA /* SongViewModel.swift in Sources */,
+				E78D14A72B10E4650001E7FA /* SongView.swift in Sources */,
 				E7244FF72B0FED4D00090EEF /* ContentView.swift in Sources */,
+				E78D14A92B10EF090001E7FA /* TabBarView.swift in Sources */,
 				E7244FF52B0FED4D00090EEF /* Music2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
