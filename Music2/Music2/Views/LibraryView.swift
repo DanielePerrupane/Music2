@@ -6,39 +6,67 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct LibraryView: View {
-    var songModel : SongViewModel
-    //var song : Song
+    @ObservedObject var songModel: SongViewModel
+    @State private var searchString = ""
+
     var body: some View {
         NavigationView {
-            List{
-                ForEach(0..<songModel.songs.count, id: \.self) { index in
-                        HStack{
-
-                            Image(systemName: songModel.songs[index].cover)         
-                                .frame(width: 60,height: 60)
-                                
-                                
-                            VStack(alignment: .leading) {
-                                Text(songModel.songs[index].title)
-                                    .fontWeight(.medium)
-                                    .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
-                                Text(songModel.songs[index].artist)
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(.gray)
-                                    .font(.callout)
-                            }
-                            Spacer()
-                            Image(systemName: "ellipsis")
-                                
-                        }
-                    
+            List {
+                ForEach(songModel.filteredSongs(for: searchString)) { song in
+                    LibraryRowView(song: song)
                 }
-            }.navigationTitle("Library")
+            }
+            .searchable(text: $searchString, placement: .automatic, prompt: "Your Library")
+            .navigationTitle("Music")
         }
     }
 }
+
+struct LibraryRowView: View {
+    let song: Song
+
+    var body: some View {
+        HStack(alignment: .center) {
+            Image(song.cover)
+                .resizable()
+                .frame(width: 60, height: 60)
+                .cornerRadius(10.0)
+
+            VStack(alignment: .leading) {
+                Text(song.title)
+                    .fontWeight(.medium)
+                    .font(.headline)
+                Text(song.artist)
+                    .fontWeight(.medium)
+                    .foregroundStyle(.gray)
+                    .font(.callout)
+            }
+
+            Spacer()
+            
+            Button(action: {
+                
+            }, label: {
+                Image(systemName: "ellipsis")
+            })
+                
+            
+                
+            
+        }
+        .padding(.vertical, 8)
+    }
+}
+
+struct LibraryView_Previews: PreviewProvider {
+    static var previews: some View {
+        LibraryView(songModel: SongViewModel())
+    }
+}
+
 
 #Preview {
     LibraryView(songModel: SongViewModel())

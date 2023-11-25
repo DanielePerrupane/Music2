@@ -61,6 +61,7 @@
 		E7244FF32B0FED4D00090EEF /* Music2 */ = {
 			isa = PBXGroup;
 			children = (
+				E78D14AC2B1243350001E7FA /* Audio */,
 				E78D14A12B10E2ED0001E7FA /* ViewModel */,
 				E78D14A02B10E2E70001E7FA /* Views */,
 				E78D149F2B10E2E30001E7FA /* Model */,
@@ -104,6 +105,13 @@
 				E78D14A42B10E3E50001E7FA /* SongViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E78D14AC2B1243350001E7FA /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

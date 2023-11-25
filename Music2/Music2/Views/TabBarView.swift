@@ -34,16 +34,16 @@ struct TabBarView: View {
                 //AGGIUNGERE ANCHE UNA SEARCHBAR
                 LibraryView(songModel: SongViewModel())
                     .tabItem {
-                        Text("Library")
-                        Image(systemName: "books.vertical.circle.fill")
+                        Text("Music")
+                        Image(systemName: "music.note.list")
                             .foregroundColor(.blue)
                     }.tag(0)
                 //#2 TAB ITEM
                 //
                 SongView(song: Song(title: "", artist: "Chris Brown", album: "Indigo", cover: "indigo"))
                     .tabItem {
-                        Text("Star")
-                        Image(systemName: "star.fill")
+                        Text("Search")
+                        Image(systemName: "magnifyingglass")
                             .foregroundColor(.blue)
                     }.tag(1)
                 //#3 TAB ITEM
