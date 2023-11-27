@@ -16,6 +16,7 @@
 		E78D14A72B10E4650001E7FA /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14A62B10E4650001E7FA /* SongView.swift */; };
 		E78D14A92B10EF090001E7FA /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14A82B10EF090001E7FA /* TabBarView.swift */; };
 		E78D14AB2B10FA210001E7FA /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14AA2B10FA210001E7FA /* LibraryView.swift */; };
+		E78D14AE2B1498C30001E7FA /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14AD2B1498C30001E7FA /* MusicPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E78D14A62B10E4650001E7FA /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		E78D14A82B10EF090001E7FA /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		E78D14AA2B10FA210001E7FA /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		E78D14AD2B1498C30001E7FA /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				E78D14A62B10E4650001E7FA /* SongView.swift */,
 				E78D14A82B10EF090001E7FA /* TabBarView.swift */,
 				E78D14AA2B10FA210001E7FA /* LibraryView.swift */,
+				E78D14AD2B1498C30001E7FA /* MusicPlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78D14AE2B1498C30001E7FA /* MusicPlayerView.swift in Sources */,
 				E78D14AB2B10FA210001E7FA /* LibraryView.swift in Sources */,
 				E78D14A32B10E3010001E7FA /* Song.swift in Sources */,
 				E78D14A52B10E3E50001E7FA /* SongViewModel.swift in Sources */,
