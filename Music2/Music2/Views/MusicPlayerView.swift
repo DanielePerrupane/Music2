@@ -64,7 +64,11 @@ struct MusicPlayerView: View {
                             
                         }, label: {
                             Image(systemName: "backward.fill")
-                                .foregroundColor(.white)
+                                .foregroundStyle(colorScheme == .dark ?
+                                                 //DarkMode
+                                                 Color.white :
+                                                    //LightMode
+                                                 Color.black )
                                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         })
                         
@@ -75,7 +79,11 @@ struct MusicPlayerView: View {
                             isPlaying.toggle()
                         }, label: {
                             Image(systemName: isPlaying ? "pause.fill" : "play.fill")
-                                .foregroundColor(.white)
+                                .foregroundStyle(colorScheme == .dark ?
+                                                 //DarkMode
+                                                 Color.white :
+                                                    //LightMode
+                                                 Color.black )
                                 .font(.title)
                         })
                         
@@ -85,7 +93,11 @@ struct MusicPlayerView: View {
                             
                         }, label: {
                             Image(systemName: "forward.fill")
-                                .foregroundColor(.white)
+                                .foregroundStyle(colorScheme == .dark ?
+                                                 //DarkMode
+                                                 Color.white :
+                                                    //LightMode
+                                                 Color.black )
                                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                             
                         })
