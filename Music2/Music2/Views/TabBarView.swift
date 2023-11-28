@@ -49,8 +49,8 @@ struct TabBarView: View {
                 //#3 TAB ITEM
                 SongView(song: Song(title: "", artist: "Bryson Tiller", album: "T R A P S O U L", cover: "trapsoul"))
                     .tabItem {
-                        Text("Star")
-                        Image(systemName: "star.fill")
+                        Text("Account")
+                        Image(systemName: "person.fill")
                             .foregroundColor(.blue)
                     }.tag(2)
                 //#4 TAB ITEM

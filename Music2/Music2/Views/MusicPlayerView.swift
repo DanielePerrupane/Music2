@@ -29,7 +29,7 @@ struct MusicPlayerView: View {
                     .padding(.horizontal,85.0)
                 Rectangle()
                     .frame(height: 40.0)
-                            .foregroundColor(.clear)
+                    .foregroundColor(.clear)
                 
                 VStack {
                     VStack(alignment: .leading) {
@@ -40,13 +40,13 @@ struct MusicPlayerView: View {
                                              Color.white :
                                                 //LightMode
                                              Color.black )
-                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                            .font(.title2)
                         Text(song.artist)
                             .fontWeight(.semibold)
                             .foregroundStyle(.gray)
                             .font(.title3)
                         Slider(value: $currentTime, in: 0...totalTime)
-
+                        
                         HStack {
                             Text("\(formattedTime(currentTime))")
                             Spacer()
@@ -56,7 +56,7 @@ struct MusicPlayerView: View {
                     .padding(.horizontal,30.0)
                     Rectangle()
                         .frame(height: 20.0)
-                                .foregroundColor(.clear)
+                        .foregroundColor(.clear)
                     
                     HStack {
                         //BACKWARD
@@ -69,7 +69,7 @@ struct MusicPlayerView: View {
                                                  Color.white :
                                                     //LightMode
                                                  Color.black )
-                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                .font(.title)
                         })
                         
                         Spacer(minLength: 80)
@@ -98,7 +98,7 @@ struct MusicPlayerView: View {
                                                  Color.white :
                                                     //LightMode
                                                  Color.black )
-                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                .font(.title)
                             
                         })
                     }

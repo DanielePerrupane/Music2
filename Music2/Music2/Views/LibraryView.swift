@@ -14,56 +14,23 @@ struct LibraryView: View {
     @State private var searchString = ""
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(songModel.filteredSongs(for: searchString)) { song in
-                    
-                    NavigationLink(destination: MusicPlayerView(song: song)) {
-                        HStack(alignment: .center) {
-                            
-                            Image(song.cover)
-                                .resizable()
-                                .frame(width: 60, height: 60)
-                                .cornerRadius(10.0)
-                            
-                            VStack(alignment: .leading) {
-                                Text(song.title)
-                                    .fontWeight(.medium)
-                                    .font(.headline)
-                                Text(song.artist)
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(.gray)
-                                    .font(.callout)
-                            }
-                            Spacer()
-                            
-                            Button(action: {
-                                // Azione per il pulsante ellissi, se necessario
-                            }) {
-                                Image(systemName: "ellipsis")
-                                    .foregroundStyle(colorScheme == .dark ?
-                                                     //DarkMode
-                                                     Color.white :
-                                                        //LightMode
-                                                     Color.black )
-                                    .imageScale(.large)
-                            }
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    ForEach(songModel.filteredSongs(for: searchString)) { song in
+                        NavigationLink(destination: MusicPlayerView(song: song)) {
+                            LibraryRowView(song: Song(title: song.title, artist: song.artist, album: song.album, cover: song.cover))
                         }
+                        Spacer(minLength: 15)
+                        
                     }
-                    // Rimuove lo stile di pulsante predefinito di NavigationLink
-                    .buttonStyle(PlainButtonStyle(
-                    
-                    ))
-                    
-                }
-                .navigationBarBackButtonHidden(true)
+                }.padding(.horizontal,20)
                 
-            }
-            
-            .searchable(text: $searchString, placement: .automatic, prompt: "Your Library")
-            .navigationBarTitle("Music")
+            }.searchable(text: $searchString, placement: .automatic, prompt: "Your Library")
+                .navigationBarTitle("Music")
             
         }
+        
     }
 }
 
@@ -73,6 +40,39 @@ struct LibraryRowView: View {
     let song: Song
     
     var body: some View {
+        HStack(alignment: .center) {
+            Image(song.cover)
+                .resizable()
+                .frame(width: 60, height: 60)
+                .cornerRadius(10.0)
+            
+            VStack(alignment: .leading) {
+                Text(song.title)
+                    .foregroundStyle(colorScheme == .dark ?
+                                     //DarkMode
+                                     Color.white :
+                                        //LightMode
+                                     Color.black )
+                    .fontWeight(.medium)
+                    .font(.headline)
+                Text(song.artist)
+                    .fontWeight(.medium)
+                    .foregroundStyle(.gray)
+                    .font(.callout)
+            }
+            
+            Spacer()
+            Button(action:
+            {
+                //INSERIRE ACTION PER ELLIPSIS
+            }, label: {
+                Image(systemName: "ellipsis")
+                    .foregroundColor(.gray) // Colore personalizzabile
+                    .imageScale(.large)
+            })
+            
+            
+        }
         Button(action: {
             showShong = true
         }, label: {
