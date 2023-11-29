@@ -108,7 +108,10 @@ struct MusicPlayerView: View {
                 
                 
             }
+            
+            
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     

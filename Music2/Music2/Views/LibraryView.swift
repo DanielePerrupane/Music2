@@ -37,27 +37,26 @@ struct LibraryView: View {
 struct LibraryRowView: View {
     @State private var showShong = false
     @Environment(\.colorScheme) var colorScheme
+    @GestureState private var dragOffset: CGFloat = 0.0
     @State private var showShongOffset: CGFloat = 0.0
+
     let song: Song
-    
+
     var body: some View {
         Button {
             showShong = true
         } label: {
-            
             HStack(alignment: .center) {
                 Image(song.cover)
                     .resizable()
                     .frame(width: 60, height: 60)
                     .cornerRadius(10.0)
-                
+
                 VStack(alignment: .leading) {
                     Text(song.title)
                         .foregroundStyle(colorScheme == .dark ?
-                                         //DarkMode
                                          Color.white :
-                                            //LightMode
-                                         Color.black )
+                                         Color.black)
                         .fontWeight(.medium)
                         .font(.headline)
                     Text(song.artist)
@@ -65,36 +64,28 @@ struct LibraryRowView: View {
                         .foregroundStyle(.gray)
                         .font(.callout)
                 }
-                
+
                 Spacer()
-                Button(action:
-                        {
-                    //INSERIRE ACTION PER ELLIPSIS
+                Button(action: {
+                    // Azione per ellipsis
                 }, label: {
                     Image(systemName: "ellipsis")
-                        .foregroundColor(.gray) // Colore personalizzabile
+                        .foregroundColor(.gray)
                         .imageScale(.large)
                 })
-                
-                
             }
-        }.fullScreenCover(isPresented: $showShong, content: {
+        }
+        .fullScreenCover(isPresented: $showShong, content: {
             MusicPlayerView(song: song)
                 .offset(y: showShongOffset)
                 .gesture(
                     DragGesture()
                         .onChanged { value in
-                            // Resetta l'offset a zero all'inizio del trascinamento
-                            showShongOffset = 0
-                            
-                            // Avvia un Timer per ritardare l'animazione
-                            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
-                                // Aggiorna l'offset durante il trascinamento
-                                let translation = value.translation.height
-                                if translation > 0 {
-                                    withAnimation {
-                                        showShongOffset = translation
-                                    }
+                            let translation = value.translation.height
+                            // Aggiorna l'offset solo se il trascinamento è verso il basso
+                            if translation > 0 {
+                                withAnimation {
+                                    showShongOffset = translation
                                 }
                             }
                         }
@@ -103,7 +94,7 @@ struct LibraryRowView: View {
                             if value.translation.height > 100 {
                                 showShong = false
                             } else {
-                                // Riporta l'offset a zero se la soglia non è stata superata
+                                // Resetta l'offset se la soglia non è stata superata
                                 withAnimation {
                                     showShongOffset = 0
                                 }
@@ -111,17 +102,18 @@ struct LibraryRowView: View {
                         }
                 )
         })
-
-
-        Button(action: {
-            showShong = true
-        }, label: {
-            
+        .onChange(of: showShong, perform: { newValue in
+            // Resetta l'offset quando la vista viene chiusa
+            if !newValue {
+                showShongOffset = 0
+            }
         })
         .padding(.vertical, 8)
-        
     }
 }
+
+
+
 
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
