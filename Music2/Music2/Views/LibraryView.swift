@@ -14,22 +14,22 @@ struct LibraryView: View {
     @State private var searchString = ""
     
     var body: some View {
+        
         NavigationStack {
             ScrollView {
                 VStack {
                     ForEach(songModel.filteredSongs(for: searchString)) { song in
-                        
                             LibraryRowView(song: Song(title: song.title, artist: song.artist, album: song.album, cover: song.cover))
-                        
                         Spacer(minLength: 15)
-                        
                     }
                 }.padding(.horizontal,20)
                 
             }.searchable(text: $searchString, placement: .automatic, prompt: "Your Library")
+            
                 .navigationBarTitle("Music")
             
         }
+        
         
     }
 }

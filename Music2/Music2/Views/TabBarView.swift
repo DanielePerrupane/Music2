@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabBarView: View {
     @State private var selectedTab: Int = 0
+   
     var body: some View {
         
         //LA ZSTACK SERVE PER SOVRAPPORRE IL MINIPLAYER
@@ -46,20 +47,15 @@ struct TabBarView: View {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.blue)
                     }.tag(1)
-                //#3 TAB ITEM
-                SongView(song: Song(title: "", artist: "Bryson Tiller", album: "T R A P S O U L", cover: "trapsoul"))
+                //#3 ACCOUNT VIEW
+//                AGGIUNGERE UN FRAME CIRCOLARE CON IMMAGINE
+//                E CREARE UNA STRUTTURA SU PIU' RIGHI CON I DATI DELL'ACCOUNT
+                AccountView(account: Account(name: "Daniele", surname: "Perrupane", age: "28", gender: "M", image: "account"))
                     .tabItem {
                         Text("Account")
                         Image(systemName: "person.fill")
                             .foregroundColor(.blue)
                     }.tag(2)
-                //#4 TAB ITEM
-                SongView(song: Song(title: "", artist: "Tory Lanez", album: "Alone At Prom", cover: "aloneatprom"))
-                    .tabItem {
-                        Text("Star")
-                        Image(systemName: "star.fill")
-                            .foregroundColor(.blue)
-                    }.tag(3)
                 
                 
             }.accentColor(.red)

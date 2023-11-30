@@ -11,6 +11,9 @@
 		E7244FF72B0FED4D00090EEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7244FF62B0FED4D00090EEF /* ContentView.swift */; };
 		E7244FF92B0FED4E00090EEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7244FF82B0FED4E00090EEF /* Assets.xcassets */; };
 		E7244FFC2B0FED4E00090EEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7244FFB2B0FED4E00090EEF /* Preview Assets.xcassets */; };
+		E746CD102B1777A900976E99 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746CD0F2B1777A900976E99 /* Account.swift */; };
+		E746CD122B17782800976E99 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746CD112B17782800976E99 /* AccountViewModel.swift */; };
+		E746CD142B17790400976E99 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746CD132B17790400976E99 /* AccountView.swift */; };
 		E78D14A32B10E3010001E7FA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14A22B10E3010001E7FA /* Song.swift */; };
 		E78D14A52B10E3E50001E7FA /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14A42B10E3E50001E7FA /* SongViewModel.swift */; };
 		E78D14A72B10E4650001E7FA /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78D14A62B10E4650001E7FA /* SongView.swift */; };
@@ -25,6 +28,9 @@
 		E7244FF62B0FED4D00090EEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7244FF82B0FED4E00090EEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7244FFB2B0FED4E00090EEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E746CD0F2B1777A900976E99 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E746CD112B17782800976E99 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		E746CD132B17790400976E99 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		E78D14A22B10E3010001E7FA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E78D14A42B10E3E50001E7FA /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		E78D14A62B10E4650001E7FA /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E78D14A22B10E3010001E7FA /* Song.swift */,
+				E746CD0F2B1777A900976E99 /* Account.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +105,7 @@
 				E78D14A82B10EF090001E7FA /* TabBarView.swift */,
 				E78D14AA2B10FA210001E7FA /* LibraryView.swift */,
 				E78D14AD2B1498C30001E7FA /* MusicPlayerView.swift */,
+				E746CD132B17790400976E99 /* AccountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				E78D14A42B10E3E50001E7FA /* SongViewModel.swift */,
+				E746CD112B17782800976E99 /* AccountViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -191,7 +200,10 @@
 				E78D14AB2B10FA210001E7FA /* LibraryView.swift in Sources */,
 				E78D14A32B10E3010001E7FA /* Song.swift in Sources */,
 				E78D14A52B10E3E50001E7FA /* SongViewModel.swift in Sources */,
+				E746CD142B17790400976E99 /* AccountView.swift in Sources */,
 				E78D14A72B10E4650001E7FA /* SongView.swift in Sources */,
+				E746CD102B1777A900976E99 /* Account.swift in Sources */,
+				E746CD122B17782800976E99 /* AccountViewModel.swift in Sources */,
 				E7244FF72B0FED4D00090EEF /* ContentView.swift in Sources */,
 				E78D14A92B10EF090001E7FA /* TabBarView.swift in Sources */,
 				E7244FF52B0FED4D00090EEF /* Music2App.swift in Sources */,
